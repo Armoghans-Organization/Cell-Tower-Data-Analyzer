@@ -14,9 +14,12 @@
 
 require_relative 'Modules/colored_text'
 require_relative 'Functions/enter'
+require_relative 'Functions/exit'
 
 include ColoredText
 include Press_Enter
+include Exit_Message
+
 
 ##########################################################################
 # Globals
@@ -34,15 +37,6 @@ $description = "Analyzing & Visualizing data from CellTowers"
 $url = "https://github.com/Armoghans-Organization/Cell-Tower-Data-Analyzer"
 
 
-Press_Enter.press_enter
-ColoredText.red("This is red text")
-Press_Enter.press_enter
-ColoredText.green("This is green text")
-Press_Enter.press_enter
-ColoredText.yellow("This is yellow text")
-Press_Enter.press_enter
-ColoredText.blue("This is blue text")
-Press_Enter.press_enter
-ColoredText.magenta("This is magenta text")
-Press_Enter.press_enter
 ColoredText.cyan("This is cyan text")
+Press_Enter.press_enter
+Exit_Message.exit_message
