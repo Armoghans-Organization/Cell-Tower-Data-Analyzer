@@ -11,6 +11,11 @@
 # Example: ruby script.rb --help
 #
 
+
+require_relative 'Modules/colored_text'
+
+include ColoredText
+
 ##########################################################################
 # Globals
 ##########################################################################
