@@ -40,4 +40,4 @@ module ColoredText
     def self.cyan(message)
       print_message(:cyan, message)
     end
-  end
+end
