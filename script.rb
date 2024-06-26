@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 #
 # Cell Tower Data Analyzer: A Ruby tool for parsing, analyzing, and visualizing data from cell towers, aiding in network optimization and decision-making.
 #
@@ -15,11 +13,13 @@
 require_relative 'Modules/colored_text'
 require_relative 'Functions/enter'
 require_relative 'Functions/exit'
+require_relative 'Modules/banner'
+
 
 include ColoredText
 include Press_Enter
 include Exit_Message
-
+include BannerPrinter
 
 ##########################################################################
 # Globals
@@ -37,6 +37,5 @@ $description = "Analyzing & Visualizing data from CellTowers"
 $url = "https://github.com/Armoghans-Organization/Cell-Tower-Data-Analyzer"
 
 
-ColoredText.cyan("This is cyan text")
-Press_Enter.press_enter
+BannerPrinter.print_banner_text
 Exit_Message.exit_message
