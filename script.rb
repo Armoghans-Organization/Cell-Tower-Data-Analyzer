@@ -14,12 +14,13 @@ require_relative 'Modules/colored_text'
 require_relative 'Functions/enter'
 require_relative 'Functions/exit'
 require_relative 'Modules/banner'
-
+require_relative 'Functions/menu'
 
 include ColoredText
 include Press_Enter
 include Exit_Message
 include BannerPrinter
+include Menu
 
 ##########################################################################
 # Globals
@@ -38,4 +39,4 @@ $url = "https://github.com/Armoghans-Organization/Cell-Tower-Data-Analyzer"
 
 
 BannerPrinter.print_banner_text
-Exit_Message.exit_message
+Menu.display_menu
