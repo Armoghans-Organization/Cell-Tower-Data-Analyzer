@@ -20,7 +20,8 @@ module Menu
       when 2
         # display_strongest_signal_tower
       when 3
-        puts "How many rows of data would you like to generate?"
+        puts
+        ColoredText.blue( "How many rows of data would you like to generate?")
         num_rows = gets.chomp.to_i
         data_generator = DataGenerator::CellTowerData.new
         data_generator.generate_data(num_rows)

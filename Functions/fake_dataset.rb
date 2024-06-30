@@ -49,6 +49,7 @@ module DataGenerator
       end
       puts
       ColoredText.green("#{num_rows} additional rows generated and appended to #{file_path}")
+      exit
     end
 
     def overwrite_data
@@ -58,6 +59,7 @@ module DataGenerator
       end
       puts
       ColoredText.green("#{num_rows} rows generated and overwrote #{file_path}")
+      exit
     end
 
     def create_new_data
