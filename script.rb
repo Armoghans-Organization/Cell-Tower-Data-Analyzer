@@ -15,6 +15,8 @@ require_relative 'Functions/enter'
 require_relative 'Functions/exit'
 require_relative 'Modules/banner'
 require_relative 'Functions/menu'
+require_relative 'Functions/average_signal_strength'
+require_relative 'Functions/strong_signal_strength'
 
 include ColoredText
 include Press_Enter

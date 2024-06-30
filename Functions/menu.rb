@@ -4,6 +4,9 @@ include DataGenerator
 
 module Menu
   def self.display_menu
+    file_path = 'cell_towers.csv'
+    average_analyzer = AverageSignalAnalyzer::Analyzer.new(file_path)
+    strongest_analyzer = StrongestSignalAnalyzer::Analyzer.new(file_path)
     loop do
       ColoredText.blue("Choose an option:")
       ColoredText.magenta("1. Display Average Signal Strength")
@@ -16,9 +19,9 @@ module Menu
 
       case choice
       when 1
-        # display_average_signal_strength
+        average_analyzer.display_average_signal_strength
       when 2
-        # display_strongest_signal_tower
+        strongest_analyzer.display_strongest_signal_tower
       when 3
         puts
         ColoredText.blue( "How many rows of data would you like to generate?")
@@ -37,3 +40,4 @@ module Menu
     end
   end
 end
+

@@ -1,6 +1,6 @@
 require 'csv'
 
-module CellTowerDataAnalyzer
+module StrongestSignalAnalyzer
   class Analyzer
     attr_reader :data
 
@@ -21,31 +21,14 @@ module CellTowerDataAnalyzer
       end
     end
 
-    def average_signal_strength
-      total_signal_strength = @data.reduce(0) { |sum, tower| sum + tower[:signal_strength] }
-      total_signal_strength / @data.size.to_f
-    end
-
     def strongest_signal_tower
       @data.max_by { |tower| tower[:signal_strength] }
     end
 
-    def display_average_signal_strength
-      puts "Average Signal Strength: #{average_signal_strength.round(2)}"
-    end
-
     def display_strongest_signal_tower
       strongest_tower = strongest_signal_tower
-      puts "Tower with Strongest Signal: ID #{strongest_tower[:id]}, Signal Strength #{strongest_tower[:signal_strength]}"
+      ColoredText.green("Tower with Strongest Signal: ID #{strongest_tower[:id]}, Signal Strength #{strongest_tower[:signal_strength]}")
+      exit
     end
   end
-
-  def self.analyze(file_path)
-    Analyzer.new(file_path)
-  end
 end
-
-# Usage
-
-
-# Calling individual methods
