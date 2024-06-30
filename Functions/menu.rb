@@ -1,3 +1,7 @@
+require_relative 'fake_dataset'
+
+include DataGenerator
+
 module Menu
   def self.display_menu
     loop do
@@ -16,7 +20,11 @@ module Menu
       when 2
         # display_strongest_signal_tower
       when 3
-        # generate_fake_dataset
+        puts "How many rows of data would you like to generate?"
+        num_rows = gets.chomp.to_i
+        data_generator = DataGenerator::CellTowerData.new
+        data_generator.generate_data(num_rows)
+        Press_Enter
       when 4
           BannerPrinter.print_banner_text
           Exit_Message.exit_message
